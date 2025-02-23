@@ -188,7 +188,7 @@ For the full interface see the Godoc: <https://pkg.go.dev/github.com/philippgill
 
 ## Installation
 
-`go get github.com/philippgille/chromem-go@latest`
+`go getgithub.com/austinjan/chromem-go@latest`
 
 ## Usage
 
@@ -266,7 +266,7 @@ Benchmarked on 2024-03-17 with:
 $ go test -benchmem -run=^$ -bench .
 goos: linux
 goarch: amd64
-pkg: github.com/philippgille/chromem-go
+pkg:github.com/austinjan/chromem-go
 cpu: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
 BenchmarkCollection_Query_NoContent_100-8          13164      90276 ns/op     5176 B/op       95 allocs/op
 BenchmarkCollection_Query_NoContent_1000-8          2142     520261 ns/op    13558 B/op      141 allocs/op
@@ -279,7 +279,7 @@ BenchmarkCollection_Query_5000-8                     550    2128121 ns/op    471
 BenchmarkCollection_Query_25000-8                    100   10063260 ns/op   211705 B/op      205 allocs/op
 BenchmarkCollection_Query_100000-8                    30   39404005 ns/op   810295 B/op      229 allocs/op
 PASS
-ok   github.com/philippgille/chromem-go 28.402s
+ok  github.com/austinjan/chromem-go 28.402s
 ```
 
 ## Development

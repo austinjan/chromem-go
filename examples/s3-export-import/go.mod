@@ -1,4 +1,4 @@
-module github.com/philippgille/chromem-go/examples/s3-export-import
+modulegithub.com/austinjan/chromem-go/examples/s3-export-import
 
 go 1.21
 
@@ -7,7 +7,7 @@ require (
 	gocloud.dev v0.37.0
 )
 
-replace github.com/philippgille/chromem-go => ./../..
+replacegithub.com/austinjan/chromem-go => ./../..
 
 require (
 	github.com/aws/aws-sdk-go v1.50.36 // indirect
