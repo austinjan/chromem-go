@@ -40,7 +40,7 @@ func main() {
 	if collection.Count() == 0 {
 		// Here we use an arXiv metadata sample, where each line contains the metadata
 		// of a paper, including its submitter, title and abstract.
-		f, err := os.Open("/tmp/arxiv_cs-cl_2023.jsonl")
+		f, err := os.Open("./tmp/arxiv_cs-cl_2023.jsonl")
 		if err != nil {
 			panic(err)
 		}
@@ -110,7 +110,11 @@ func main() {
 			i+1, res.Similarity, res.ID, res.Metadata["submitter"], res.Metadata["title"], content)
 	}
 	log.Printf("Search results:\n%s\n", buf.String())
+	alldocs := collection.GetDocuments()
+	fmt.Println("All docs:", len(alldocs))
+	filterdocs := collection.GetDocumentsWithFilter(map[string]string{"URL": "https://arxiv.org/abs/2310.14025"})
 
+	log.Println(filterdocs)
 	/* Output:
 	2024/03/10 18:23:55 Setting up chromem-go...
 	2024/03/10 18:23:55 Reading JSON lines...
