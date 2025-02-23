@@ -99,7 +99,7 @@ Highlights in this release are query performance improvements (5x faster, 98% fe
     ```text
     goos: linux
     goarch: amd64
-    pkg: github.com/philippgille/chromem-go
+    pkg:github.com/austinjan/chromem-go
     cpu: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
                                         │    before     │               after                 │
                                         │    sec/op     │    sec/op     vs base               │

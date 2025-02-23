@@ -1,4 +1,4 @@
-module github.com/philippgille/chromem-go/examples/rag-wikipedia-ollama
+modulegithub.com/austinjan/chromem-go/examples/rag-wikipedia-ollama
 
 go 1.21
 
@@ -7,4 +7,4 @@ require (
 	github.com/sashabaranov/go-openai v1.17.9
 )
 
-replace github.com/philippgille/chromem-go => ./../..
+replacegithub.com/austinjan/chromem-go => ./../..
