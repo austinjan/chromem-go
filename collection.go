@@ -143,6 +143,19 @@ func (c *Collection) GetDocuments() map[string]Document {
 	return docs
 }
 
+// GetDocumentsWithFilter returns all documents in the collection with the specified filter.
+func (c *Collection) GetDocumentsWithFilter(where map[string]string) map[string]Document {
+	c.documentsLock.RLock()
+	defer c.documentsLock.RUnlock()
+
+	filteredDocs := filterDocs(c.documents, where, nil)
+	docs := make(map[string]Document, len(filteredDocs))
+	for _, doc := range filteredDocs {
+		docs[doc.ID] = *doc
+	}
+	return docs
+}
+
 // Add embeddings to the datastore.
 //
 //   - ids: The ids of the embeddings you wish to add
