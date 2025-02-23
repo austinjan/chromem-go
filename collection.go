@@ -131,6 +131,18 @@ func (c *Collection) IDs() []string {
 	return ids
 }
 
+// GetDocuments returns all documents in the collection.
+func (c *Collection) GetDocuments() map[string]Document {
+	c.documentsLock.RLock()
+	defer c.documentsLock.RUnlock()
+
+	docs := make(map[string]Document, len(c.documents))
+	for k, v := range c.documents {
+		docs[k] = *v
+	}
+	return docs
+}
+
 // Add embeddings to the datastore.
 //
 //   - ids: The ids of the embeddings you wish to add
